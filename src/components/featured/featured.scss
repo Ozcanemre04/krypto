@@ -1,0 +1,75 @@
+
+@import '../../sass/variable.scss';
+.featured{
+    width: 100%;
+    margin-top: 5rem;
+    h2{
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.8rem;
+        line-height: 147%;
+        color: $white;
+    }
+    .brand{
+        margin-inline: auto;
+        width: 80%;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+        img{
+            &:first-of-type{
+                width: 117.26px;
+                height: 43.18px;
+            }
+            &:nth-of-type(2){
+                width: 104.51px;
+                height: 16.19px;
+            }
+            &:nth-of-type(3){
+                width: 42.2px;
+                height: 23.06px;
+            }
+            &:nth-of-type(4){
+                width: 71.14px;
+                height: 18.15px;
+
+            }
+        }
+      
+    }
+}
+@media screen and (min-width:$small-tablet) {
+    .featured{
+          h2{
+            font-size: 3rem;
+          }
+          .brand{
+            margin: 0;
+            width: 100%;
+            gap: 6.3rem;
+            img{
+                &:first-of-type{
+                    width: 17.5rem;
+                    height: 6.5rem;
+                }
+                &:nth-of-type(2){
+                    width: 15.7rem;
+                    height: 2.4rem;
+                }
+                &:nth-of-type(3){
+                    width: 6.3rem;
+                    height: 3.5rem;
+                }
+                &:nth-of-type(4){
+                    width: 10.7rem;
+                    height: 2.7rem;
+    
+                }
+            }
+          }
+    }
+}

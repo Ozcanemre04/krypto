@@ -1,0 +1,20 @@
+@import '../../sass/variable.scss';
+
+header{
+    width: 100%;
+    @include center();
+    padding-top: 2.6rem;
+    .header-container{
+        display: flex;
+        justify-content: space-between;
+        width: 86%;
+        
+        h1{
+            color: white;
+        }
+        span{
+            color: white;
+        }
+    }
+   
+}

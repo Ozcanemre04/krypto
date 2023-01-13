@@ -1,0 +1,39 @@
+@import './variable.scss';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    font-size: 10px;
+    font-family: 'Outfit', sans-serif;
+    outline: none;
+}
+.App{
+    background-color: $background;
+    width: 100%;
+    height: fit-content;
+    z-index: 1;
+    
+}
+main{
+    width: calc($mobile - 24px);
+    margin-inline: auto;
+}
+
+@media screen and (min-width:$small-tablet) {
+    main{
+        width: calc($small-tablet - 5%);
+    }
+}
+@media screen and (min-width:$tablet) {
+    main{
+        width: calc($tablet - 32px);
+    }
+}
+@media screen and (min-width:$desktop) {
+    main{
+        width: calc($desktop - 10%);
+    }
+}
