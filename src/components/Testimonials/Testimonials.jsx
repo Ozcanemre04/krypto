@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {Swiper,SwiperSlide} from 'swiper/react';
 import  {Pagination,Navigation,A11y} from 'swiper'
 import evan from '../../assets/evan.png'
@@ -11,15 +11,28 @@ import './testimonials.scss'
 
 
 const Testimonials = () => {
+  const [slide,setSlide] = useState(1)
+  const screenSize = screen.width
+    
+  useEffect(()=>{
+    if (screenSize > 744){
+      setSlide(2)
+    }
+     if(screenSize > 1024){
+      setSlide(3)
+    }
+  },[screenSize])
+
+  
   return (
     <section className="testimonials-container">
       <span>testimonials</span>
       <h3>read what others have to say</h3>
       <div className='testimonials'>
         <Swiper
-        modules={[Navigation,A11y,Pagination]}
-        spaceBetween={27}
-         slidesPerView={1}
+         modules={[Navigation,A11y,Pagination]}
+         spaceBetween={27}
+         slidesPerView={slide}
          pagination={{clickable:true}}
          >
           <SwiperSlide>

@@ -4,36 +4,40 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 body,html{
     font-size: 10px;
     font-family: 'Outfit', sans-serif;
     outline: none;
+    overflow-x: hidden;
 }
 .App{
     background-color: $background;
     width: 100%;
     height: fit-content;
     z-index: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
     
 }
 main{
-    width: calc($mobile - 24px);
+    width: 90%;
     margin-inline: auto;
+    z-index: 1;
 }
 
-@media screen and (min-width:$small-tablet) {
-    main{
-        width: calc($small-tablet - 5%);
-    }
-}
-@media screen and (min-width:$tablet) {
-    main{
-        width: calc($tablet - 32px);
-    }
-}
-@media screen and (min-width:$desktop) {
-    main{
-        width: calc($desktop - 10%);
-    }
+.right-ellipse{
+    overflow-x: hidden;
+    position: absolute;
+    right: -14rem;
+    top: 30rem;
+    width: 35rem;
+    height: 35rem;
+    background: #86CFD0;
+    box-shadow:-0.8rem 0 10px #86CFD0;
+    opacity: 0.5;
+    filter: blur(77px);
+    border-radius: 50%;
+    z-index: 2;
 }

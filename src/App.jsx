@@ -13,6 +13,8 @@ function App() {
 
   return (
     <div className="App">
+      <div className='right-ellipse'></div>
+      <div className='top-ellipse'></div>
       <Header/>
       <main>
         <Section/>

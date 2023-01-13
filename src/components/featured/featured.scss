@@ -50,14 +50,15 @@
           .brand{
             margin: 0;
             width: 100%;
-            gap: 6.3rem;
+            gap: 5.3rem;
+            justify-content: space-between;
             img{
                 &:first-of-type{
-                    width: 17.5rem;
+                    width: 16.5rem;
                     height: 6.5rem;
                 }
                 &:nth-of-type(2){
-                    width: 15.7rem;
+                    width: 14.7rem;
                     height: 2.4rem;
                 }
                 &:nth-of-type(3){
@@ -65,11 +66,19 @@
                     height: 3.5rem;
                 }
                 &:nth-of-type(4){
-                    width: 10.7rem;
+                    width: 9.7rem;
                     height: 2.7rem;
     
                 }
             }
           }
+    }
+}
+@media screen and (min-width:$tablet) {
+    .featured{
+        .brand{
+            justify-content: center;
+            gap: 6.3rem;
+        }
     }
 }

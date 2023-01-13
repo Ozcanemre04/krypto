@@ -1,16 +1,17 @@
 @import '../../sass/variable.scss';
 
 footer{
+    margin-top: 6rem;
     h3{
         font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 22px;
-line-height: 26px;
-text-align: center;
-text-transform: uppercase;
-color: #D9D9D9;
-margin: 6rem 0 4rem 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #D9D9D9;
+        margin-bottom:4rem;
     }
     .footer-container{
         display: flex;
@@ -77,7 +78,7 @@ margin: 6rem 0 4rem 0;
                     font-size: 16px;
                     line-height: 19px;
                     height: 5rem;
-                    width: 80%;
+                    width: 60%;
                     border: none;
                     outline: none;
                     padding-left: 1.5rem;
@@ -135,20 +136,53 @@ margin: 6rem 0 4rem 0;
 
 @media screen and (min-width:$tablet) {
     footer{
-        padding: 4rem;
+        width:90%;
+        margin-inline: auto;
         h3{
             text-align: start;
+            margin-bottom: 2rem;
         }
         .footer-container{
             flex-direction: row;
-            gap: 7.2rem;
+            justify-content: space-between;
+            gap: 5rem;
+            .footer{
+                width: fit-content;
+                gap: 6rem;
+                .each-column{
+                    width: 12rem;
+                    span{
+                        justify-content: flex-start;
+                    }
+                .column-element{
+                    p{
+                        text-align: start;
+                    }
+                }
+                }
+            }
             .newsletter{
+                width: 55%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
                 h3{
                     text-align: start;
+                    margin: 0 0 2rem 0;
                 }
                 .input-container{
-                    width: 80%;
+                    width: 100%;
                     margin: 0;
+                    gap: 2rem;
+                    justify-content: flex-start;
+                    input{
+                        width: 60%;
+                    }
+                    button{
+                        width: 20%;
+                        flex-shrink: 0;
+                    }
                 }
             }
         }
@@ -158,19 +192,21 @@ margin: 6rem 0 4rem 0;
 
 @media screen and (min-width:$desktop) {
     footer{
-        width: 90%;
-        margin-inline: auto;
+        padding-bottom: 2rem;
         display: flex;
         align-items: center;
-        gap: 2.4rem;
+        gap: 3rem;
         h3{
             align-self: flex-start;
             margin: 0;
-            width: 10%;
+            width: 12%;
         }
         .footer-container{
             width: 80%;
-            gap: 12rem;
+            gap: 13rem;
+            .footer{
+                gap: 10rem;
+            }
             .newsletter{
                 h3{
                     width: 100%;
@@ -179,8 +215,28 @@ margin: 6rem 0 4rem 0;
                     width: 100%;
                     justify-content: flex-start;
                     input{
-                        width: 60%;
+                        width: 70%;
                     }
+                    button{
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1800px) {
+    footer{
+        .footer-container{
+            .newsletter{
+                .input-container{
+                    input{
+                        width: 50%;
+                    }
+                }
+                button{
+                    width: 20%;
                 }
             }
         }
