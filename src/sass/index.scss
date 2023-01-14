@@ -31,13 +31,31 @@ main{
     overflow-x: hidden;
     position: absolute;
     right: -14rem;
-    top: 30rem;
+    top: 32rem;
     width: 35rem;
     height: 35rem;
     background: #86CFD0;
-    box-shadow:-0.8rem 0 10px #86CFD0;
     opacity: 0.5;
     filter: blur(77px);
     border-radius: 50%;
     z-index: 2;
+}
+.top-ellipse{
+    position: absolute;
+    top: -48rem;
+    left: -16rem;
+    width: 70rem;
+    height: 70rem;
+    background: #312964;
+    opacity: 0.7;
+    filter: blur(77.5px);
+    border-radius: 50%;
+}
+
+
+
+@media screen and (min-width:$desktop) {
+   main{
+    width: 80%;
+   }
 }

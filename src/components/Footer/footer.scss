@@ -192,6 +192,7 @@ footer{
 
 @media screen and (min-width:$desktop) {
     footer{
+        width: 80%;
         padding-bottom: 2rem;
         display: flex;
         align-items: center;
