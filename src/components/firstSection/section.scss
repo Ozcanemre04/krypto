@@ -3,10 +3,8 @@
 .first-section{
     margin-top: 4rem;
     width: 100%;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include center();
     gap: 2rem;
     .right-side{
         width: 100%;
@@ -14,29 +12,27 @@
         @include center();
         img{
             width: 50%;
-            height: 186px;
+            height: 18.6rem;
             background: linear-gradient(0deg, rgba(49, 41, 100, 0.2), rgba(49, 41, 100, 0.2));
             border-radius: 5px;
+            z-index: 999;
         }
     }
     .left-side{
 
-        h2{
+        h2{ 
+            @include font(normal,700,6.4rem,110%);
             text-align: center;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 6.4rem;
-            line-height: 110%;
             color: $white;
+            z-index: 999;
+            position: relative;
             span{
                 color: $lightBlue;
             }
         }
-        p{
-            font-style: normal;
-            font-weight: 400;
-            font-size: 2rem;
-            line-height: 138%;
+        p{  
+            font-family: 'Roboto';
+            @include font(normal,400,2rem,138%);
             text-align: center;
             text-transform: lowercase;
             color: $white;
@@ -44,17 +40,12 @@
             
         }
         .buttons{
-            display: flex;
-            justify-content: center;
+            @include center();
             gap: 2rem;
             width: 100%;
             button{
-                width: 50%;
-                height: 6rem;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 20px;
-                line-height:138%;
+                @include widtheight(50%,6rem);
+                @include font(normal,600,2rem,138%);
                 text-align: center;
                 text-transform: uppercase;
                 color: $white;
@@ -83,8 +74,7 @@
     padding: 0;
          img{
             background: transparent;
-            width: 100%;
-            height: 26rem;
+            @include widtheight(100%,26rem);
         }
     }
     .left-side{

@@ -4,10 +4,7 @@ footer{
     margin-top: 6rem;
     h3{
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 26px;
+        @include font(normal,700,22px,26px);
         text-align: center;
         text-transform: uppercase;
         color: #D9D9D9;
@@ -24,23 +21,17 @@ footer{
             .each-column{
                 span{
                     font-family: 'Roboto';
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 16px;
-                    line-height: 19px;
+                    @include font(normal,600,16px,19px);
+                    @include center();
                      text-align: center;
                      text-transform: lowercase;
                      color: #D9D9D9;
-                     @include center();
                      margin-bottom: 2rem;
                 }
                 .column-element{
-                    p{
-                          font-style: normal;
-                          font-weight: 400;
-                          font-size: 16px;
-                          line-height: 31px;
-                          /* or 194% */
+                    p{    
+                          font-family: 'Roboto';
+                          @include font(normal,400,16px,194%);
                           text-align: center;
                           text-transform: lowercase;
                           color: #D9D9D9;
@@ -49,36 +40,28 @@ footer{
             }
         }
         .newsletter{
+            margin-top: 5.4rem;
             width: 100%;
             padding-bottom: 8rem;
             h3{
                 font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 22px;
-                line-height: 26px;
+                @include font(normal,400,2.2rem,26px);
                 text-align: center;
                 text-transform: lowercase;
                 color: #D9D9D9;
 
             }
             .input-container{
-                display: flex;
-                align-items: center;
+                @include center();
                 gap: 1.6rem;
-                justify-content: center;
                 width: 90%;
                 margin-inline: auto;
                 input{
                     background: #8F8FDB;
                     border-radius: 25px;
                     font-family: 'Roboto';
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 19px;
-                    height: 5rem;
-                    width: 60%;
+                    @include font(normal,400,1.6rem,19px);
+                    @include widtheight(60%,5rem);
                     border: none;
                     outline: none;
                     padding-left: 1.5rem;
@@ -90,16 +73,12 @@ footer{
                 button{                   
                      background: #312964;
                      border-radius: 25px;
-                     height: 5rem;
-                     width: 20%;
+                     @include widtheight(20%,5rem);
                     border: none;
                     span{
                         display: none;
                         font-family: 'Roboto';
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 14px;
-                        line-height: 16px;
+                        @include font(normal,400,1.4rem,16px);
                         text-align: center;
                         color: #D9D9D9;
                     }
@@ -112,11 +91,13 @@ footer{
 
 @media screen and (min-width:$small-tablet) {
     footer{
+        
         .footer-container{
             .footer{
                 gap: 13rem;
             }
             .newsletter{
+                margin-top: 0;
                 .input-container{
                     width: 60%;
                     button{
@@ -136,6 +117,7 @@ footer{
 
 @media screen and (min-width:$tablet) {
     footer{
+        padding-bottom: 5rem;
         width:90%;
         margin-inline: auto;
         h3{
@@ -203,7 +185,7 @@ footer{
             width: 12%;
         }
         .footer-container{
-            width: 80%;
+            width: 90%;
             gap: 13rem;
             .footer{
                 gap: 10rem;

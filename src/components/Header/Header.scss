@@ -10,18 +10,20 @@ header{
         justify-content: space-between;
         gap: 22rem;
         align-items: center;
-        height: 5rem;
-        width: 100%;
+        @include widtheight(100%,5rem);
         
         h1{
-            color: white;
+            @include font(normal,600,2rem,138%);
+            text-transform: uppercase;
+            color: $white;
+            z-index: 999;
         }
         .lines{
             display: flex;
             flex-direction: column;
             gap: 1rem;
             img{
-                color:#EBEBEB;
+                color:$white;
                 &:nth-of-type(2){
                     width: 1.7rem;
                     align-self: center;
@@ -29,32 +31,25 @@ header{
             }
         }
         nav{
-            font-family: 'Outfit';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 138%;
-            color: #EBEBEB;
+            @include font(normal,400,2rem,138%);
+            color: $white;
             display: none;
             ul{
                 display: flex;
                 align-items: center;
                 gap: 6rem;
                 list-style-type: none;
-               li{
+                li{
+                   z-index: 999;
                 &:last-of-type{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    @include center();
                     gap: 0.8rem;
                     background: #312964;
                     border-radius: 20px;
-                    width: 12rem;
-                    height: 4rem;
+                    @include widtheight(12rem,4rem);
                     
                     span{
-                        width: 1rem;
-                        height: 1rem;
+                        @include widtheight(1rem,1rem);
                         border-radius: 50%;
                         background: #8F8FDB;
                         position: relative;
@@ -63,8 +58,7 @@ header{
                         
                         &:before{
                             content: '';
-                            width: 2rem;
-                            height: 2rem;
+                            @include widtheight(2rem,2rem);
                             position: absolute;
                             border-radius: 50%;
                             top: 50%;

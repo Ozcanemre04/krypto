@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-$background:#010922;;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// color
+$background:#010922;
 $white: #EBEBEB;
 $lightBlue:#AED4DB;
 $darkBlue:#312964;
-
+// viewport
 $mobile:375px;
 $small-tablet:744px;
 $tablet:1024px;
 $desktop:1440px;
 
 
-
+// function
 @mixin center(){
     display: flex;
     justify-content: center;
@@ -18,19 +21,28 @@ $desktop:1440px;
 }
 
 @mixin button($width){
-                
-                font-family: 'Outfit';
                 font-style: normal;
                 font-weight: 600;
                 font-size: 20px;
                 line-height: 138%;
                 text-align: center;
                 text-transform: uppercase;
-                color: #EBEBEB;
-                background: #312964;
+                color: $white;
+                background: $darkBlue;
                 border-radius: 30px;
                 padding: 1.8rem;
-                
                 width: $width;
                 border: none;
+}
+
+@mixin font ($style,$weight,$size,$line-height){
+            font-style: $style;
+            font-weight: $weight;
+            font-size: $size;
+            line-height: $line-height;
+}
+
+@mixin widtheight($width,$height){
+    width: $width;
+    height: $height;
 }

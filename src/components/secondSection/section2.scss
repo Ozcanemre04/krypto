@@ -27,10 +27,7 @@
             flex-direction: column;
             align-items: center;
             span{
-                font-style: normal;
-                font-weight: 400;
-                font-size:2rem;
-                line-height: 138%;
+                @include font(normal,400,2rem,138%);
                 text-align: center;
                 letter-spacing: 0.1em;
                 text-transform: uppercase;
@@ -38,22 +35,16 @@
             }
             h3{
                 margin: 2.5rem 0 2.5rem 0;
-                font-style: normal;
-                font-weight: 700;
-                font-size: 2.8rem;
-                line-height: 110%;
+                @include font(normal,700,2.8rem,110%);
                 text-align: center;
-                color: #EBEBEB;
+                color: $white;
             }
             p{
                 font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 2rem;
-                line-height: 138%;
+                @include font(normal,400,2rem,138%);
                 text-align: center;
                 text-transform: lowercase;
-                color: #EBEBEB;
+                color: $white;
             }
             button{
                 @include button(90%);
@@ -78,9 +69,8 @@
               
             }
             img{
-                height: 100%;
                 margin: 0;
-                width: 45%;
+                @include widtheight(45%,100%);
             }
             .info{
                 width: 45%;
@@ -109,8 +99,7 @@
                 h3{
                     font-size: 6.4rem;
                 }
-                
-                
+                   
             }
                
         }
