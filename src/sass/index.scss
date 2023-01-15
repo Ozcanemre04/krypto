@@ -1,33 +1,37 @@
 @import './variable.scss';
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+
 }
-body,html{
+
+body,
+html {
     font-size: 10px;
     font-family: 'Outfit', sans-serif;
     outline: none;
     overflow-x: hidden;
 }
-.App{
+
+.App {
     background-color: $background;
     width: 100%;
     height: fit-content;
     z-index: 1;
     overflow-x: hidden;
     overflow-y: auto;
-    
+
 }
-main{
+
+main {
     width: 90%;
     margin-inline: auto;
     z-index: 1;
 }
 
-.right-ellipse{
+.right-ellipse {
     overflow-x: hidden;
     position: absolute;
     right: -14rem;
@@ -40,7 +44,8 @@ main{
     border-radius: 50%;
     z-index: 2;
 }
-.top-ellipse{
+
+.top-ellipse {
     position: absolute;
     top: -48rem;
     left: -16rem;
@@ -56,7 +61,7 @@ main{
 
 
 @media screen and (min-width:$desktop) {
-   main{
-    width: 80%;
-   }
+    main {
+        width: 80%;
+    }
 }

@@ -1,78 +1,91 @@
-
 @import '../../sass/variable.scss';
-.featured{
+
+.featured {
     width: 100%;
     margin-top: 5rem;
-    h2{ 
+
+    h2 {
         font-family: 'Roboto';
-        @include font(normal,400,2.8rem,147%);
+        @include font(normal, 400, 2.8rem, 147%);
         text-align: center;
         color: $white;
     }
-    .brand{
+
+    .brand {
         margin-inline: auto;
         width: 80%;
         margin-top: 2rem;
         @include center();
         flex-wrap: wrap;
         gap: 3rem;
-        img{
-            &:first-of-type{
+
+        img {
+            &:first-of-type {
                 width: 117.26px;
                 height: 43.18px;
             }
-            &:nth-of-type(2){
+
+            &:nth-of-type(2) {
                 width: 104.51px;
                 height: 16.19px;
             }
-            &:nth-of-type(3){
+
+            &:nth-of-type(3) {
                 width: 42.2px;
                 height: 23.06px;
             }
-            &:nth-of-type(4){
+
+            &:nth-of-type(4) {
                 width: 71.14px;
                 height: 18.15px;
 
             }
         }
-      
+
     }
 }
+
 @media screen and (min-width:$small-tablet) {
-    .featured{
-          h2{
+    .featured {
+        h2 {
             font-size: 3rem;
-          }
-          .brand{
+        }
+
+        .brand {
             margin: 0;
             width: 100%;
             gap: 5.3rem;
             justify-content: space-between;
-            img{
-                &:first-of-type{
+
+            img {
+                &:first-of-type {
                     width: 16.5rem;
                     height: 6.5rem;
                 }
-                &:nth-of-type(2){
+
+                &:nth-of-type(2) {
                     width: 14.7rem;
                     height: 2.4rem;
                 }
-                &:nth-of-type(3){
+
+                &:nth-of-type(3) {
                     width: 6.3rem;
                     height: 3.5rem;
                 }
-                &:nth-of-type(4){
+
+                &:nth-of-type(4) {
                     width: 9.7rem;
                     height: 2.7rem;
-    
+
                 }
             }
-          }
+        }
     }
 }
+
 @media screen and (min-width:$tablet) {
-    .featured{
-        .brand{
+    .featured {
+        .brand {
             justify-content: center;
             gap: 6.3rem;
         }

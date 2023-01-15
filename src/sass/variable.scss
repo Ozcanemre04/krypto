@@ -14,35 +14,35 @@ $desktop:1440px;
 
 
 // function
-@mixin center(){
+@mixin center() {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@mixin button($width){
-                font-style: normal;
-                font-weight: 600;
-                font-size: 20px;
-                line-height: 138%;
-                text-align: center;
-                text-transform: uppercase;
-                color: $white;
-                background: $darkBlue;
-                border-radius: 30px;
-                padding: 1.8rem;
-                width: $width;
-                border: none;
+@mixin button($width) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 138%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    background: $darkBlue;
+    border-radius: 30px;
+    padding: 1.8rem;
+    width: $width;
+    border: none;
 }
 
-@mixin font ($style,$weight,$size,$line-height){
-            font-style: $style;
-            font-weight: $weight;
-            font-size: $size;
-            line-height: $line-height;
+@mixin font ($style, $weight, $size, $line-height) {
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line-height;
 }
 
-@mixin widtheight($width,$height){
+@mixin widtheight($width, $height) {
     width: $width;
     height: $height;
 }

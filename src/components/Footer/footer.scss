@@ -1,84 +1,96 @@
 @import '../../sass/variable.scss';
 
-footer{
+footer {
     margin-top: 6rem;
-    h3{
+
+    h3 {
         font-family: 'Roboto';
-        @include font(normal,700,22px,26px);
+        @include font(normal, 700, 22px, 26px);
         text-align: center;
         text-transform: uppercase;
         color: #D9D9D9;
-        margin-bottom:4rem;
+        margin-bottom: 4rem;
     }
-    .footer-container{
+
+    .footer-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        .footer{
+
+        .footer {
             display: flex;
             gap: 4.7rem;
-            .each-column{
-                span{
+
+            .each-column {
+                span {
                     font-family: 'Roboto';
-                    @include font(normal,600,16px,19px);
+                    @include font(normal, 600, 16px, 19px);
                     @include center();
-                     text-align: center;
-                     text-transform: lowercase;
-                     color: #D9D9D9;
-                     margin-bottom: 2rem;
+                    text-align: center;
+                    text-transform: lowercase;
+                    color: #D9D9D9;
+                    margin-bottom: 2rem;
                 }
-                .column-element{
-                    p{    
-                          font-family: 'Roboto';
-                          @include font(normal,400,16px,194%);
-                          text-align: center;
-                          text-transform: lowercase;
-                          color: #D9D9D9;
+
+                .column-element {
+                    p {
+                        font-family: 'Roboto';
+                        @include font(normal, 400, 16px, 194%);
+                        text-align: center;
+                        text-transform: lowercase;
+                        color: #D9D9D9;
                     }
                 }
             }
         }
-        .newsletter{
+
+        .newsletter {
             margin-top: 5.4rem;
             width: 100%;
             padding-bottom: 8rem;
-            h3{
+
+            h3 {
                 font-family: 'Roboto';
-                @include font(normal,400,2.2rem,26px);
+                @include font(normal, 400, 2.2rem, 26px);
                 text-align: center;
                 text-transform: lowercase;
                 color: #D9D9D9;
 
             }
-            .input-container{
+
+            .input-container {
                 @include center();
                 gap: 1.6rem;
                 width: 90%;
                 margin-inline: auto;
-                input{
+
+                input {
                     background: #8F8FDB;
                     border-radius: 25px;
                     font-family: 'Roboto';
-                    @include font(normal,400,1.6rem,19px);
-                    @include widtheight(60%,5rem);
+                    @include font(normal, 400, 1.6rem, 19px);
+                    @include widtheight(60%, 5rem);
                     border: none;
                     outline: none;
                     padding-left: 1.5rem;
                     color: #010922;
-                  &::placeholder{
-                      color: #010922;   
-                  }
+
+                    &::placeholder {
+                        color: #010922;
+                    }
                 }
-                button{                   
-                     background: #312964;
-                     border-radius: 25px;
-                     @include widtheight(20%,5rem);
+
+                button {
+                    background: #312964;
+                    border-radius: 25px;
+                    @include widtheight(20%, 5rem);
                     border: none;
-                    span{
+
+                    span {
                         display: none;
                         font-family: 'Roboto';
-                        @include font(normal,400,1.4rem,16px);
+                        @include font(normal, 400, 1.4rem, 16px);
                         text-align: center;
                         color: #D9D9D9;
                     }
@@ -90,23 +102,27 @@ footer{
 
 
 @media screen and (min-width:$small-tablet) {
-    footer{
-        
-        .footer-container{
-            .footer{
+    footer {
+
+        .footer-container {
+            .footer {
                 gap: 13rem;
             }
-            .newsletter{
+
+            .newsletter {
                 margin-top: 0;
-                .input-container{
+
+                .input-container {
                     width: 60%;
-                    button{
-                        img{
+
+                    button {
+                        img {
                             display: none;
                         }
-                        span{
+
+                        span {
                             display: block;
-                            
+
                         }
                     }
                 }
@@ -116,52 +132,63 @@ footer{
 }
 
 @media screen and (min-width:$tablet) {
-    footer{
+    footer {
         padding-bottom: 5rem;
-        width:90%;
+        width: 90%;
         margin-inline: auto;
-        h3{
+
+        h3 {
             text-align: start;
             margin-bottom: 2rem;
         }
-        .footer-container{
+
+        .footer-container {
             flex-direction: row;
             justify-content: space-between;
             gap: 5rem;
-            .footer{
+
+            .footer {
                 width: fit-content;
                 gap: 6rem;
-                .each-column{
+
+                .each-column {
                     width: 12rem;
-                    span{
+
+                    span {
                         justify-content: flex-start;
                     }
-                .column-element{
-                    p{
-                        text-align: start;
+
+                    .column-element {
+                        p {
+                            text-align: start;
+                        }
                     }
                 }
-                }
             }
-            .newsletter{
+
+            .newsletter {
                 width: 55%;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                h3{
+
+                h3 {
                     text-align: start;
                     margin: 0 0 2rem 0;
                 }
-                .input-container{
+
+                .input-container {
                     width: 100%;
                     margin: 0;
                     gap: 2rem;
                     justify-content: flex-start;
-                    input{
+
+                    input {
                         width: 60%;
                     }
-                    button{
+
+                    button {
                         width: 20%;
                         flex-shrink: 0;
                     }
@@ -173,34 +200,41 @@ footer{
 }
 
 @media screen and (min-width:$desktop) {
-    footer{
+    footer {
         width: 80%;
         padding-bottom: 2rem;
         display: flex;
         align-items: center;
         gap: 3rem;
-        h3{
+
+        h3 {
             align-self: flex-start;
             margin: 0;
             width: 12%;
         }
-        .footer-container{
+
+        .footer-container {
             width: 90%;
             gap: 13rem;
-            .footer{
+
+            .footer {
                 gap: 10rem;
             }
-            .newsletter{
-                h3{
+
+            .newsletter {
+                h3 {
                     width: 100%;
                 }
-                .input-container{
+
+                .input-container {
                     width: 100%;
                     justify-content: flex-start;
-                    input{
+
+                    input {
                         width: 70%;
                     }
-                    button{
+
+                    button {
                         width: 30%;
                     }
                 }
@@ -210,15 +244,16 @@ footer{
 }
 
 @media screen and (min-width:1800px) {
-    footer{
-        .footer-container{
-            .newsletter{
-                .input-container{
-                    input{
+    footer {
+        .footer-container {
+            .newsletter {
+                .input-container {
+                    input {
                         width: 50%;
                     }
                 }
-                button{
+
+                button {
                     width: 20%;
                 }
             }
