@@ -1,23 +1,24 @@
 @import '../../sass/variable.scss';
 
 .first-section {
-    margin-top: 4rem;
+    margin-top: -20rem;
     width: 100%;
     flex-direction: column;
     @include center();
     gap: 2rem;
+    z-index: 2;
 
     .right-side {
         width: 100%;
         padding: 5rem 0 2rem 0;
         @include center();
-
+       
         img {
             width: 50%;
             height: 18.6rem;
             background: linear-gradient(0deg, rgba(49, 41, 100, 0.2), rgba(49, 41, 100, 0.2));
             border-radius: 5px;
-            z-index: 999;
+            z-index: 10;
         }
     }
 
@@ -75,6 +76,7 @@
 
 @media screen and (min-width:$small-tablet) {
     .first-section {
+        margin-top: 4rem;
         flex-direction: row-reverse;
         gap: 4.6rem;
 

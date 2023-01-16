@@ -5,6 +5,10 @@ header {
     margin-inline: auto;
     @include center();
     padding-top: 2.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     .header-container {
         display: flex;
@@ -22,15 +26,60 @@ header {
 
         .lines {
             display: flex;
+            z-index: 99;
             flex-direction: column;
             gap: 1rem;
+            cursor: pointer;
 
             img {
                 color: $white;
 
+                &:nth-of-type(1) {
+                    transition: 0.5s ease-in-out;
+                }
+
                 &:nth-of-type(2) {
                     width: 1.7rem;
                     align-self: center;
+                    transition: 0.5s ease-in-out;
+                }
+
+                &:nth-of-type(3) {
+                    transition: 0.5s ease-in-out;
+
+                }
+            }
+        }
+
+        .active-lines {
+            cursor: pointer;
+            display: flex;
+            z-index: 99;
+            flex-direction: column;
+            gap: 1rem;
+
+            img {
+                &:first-of-type {
+                    width: 2.5rem;
+                    transform: rotate(135deg) translate(5px, -8px);
+                    transition: .25s ease-in-out;
+
+                }
+
+                &:nth-of-type(2) {
+                    transform: translate(60px);
+                    opacity: 0;
+                    transition: .25s ease-in-out;
+
+
+                }
+
+                &:last-of-type {
+                    width: 2.5rem;
+                    transform: rotate(-135deg) translate(8px, 10px);
+                    transition: .25s ease-in-out;
+
+
                 }
             }
         }
@@ -43,18 +92,28 @@ header {
             ul {
                 display: flex;
                 align-items: center;
-                gap: 6rem;
+                gap: 4rem;
                 list-style-type: none;
 
                 li {
                     z-index: 999;
+                    text-align: center;
+                    @include center();
+                    border-radius: 20px;
+                    padding: 0.8rem;
+                    width: 9rem;
+
+                    &:hover {
+                        background: #312964;
+                    }
 
                     &:last-of-type {
                         @include center();
                         gap: 0.8rem;
                         background: #312964;
                         border-radius: 20px;
-                        @include widtheight(12rem, 4rem);
+                        width: 12rem;
+
 
                         span {
                             @include widtheight(1rem, 1rem);
@@ -83,14 +142,109 @@ header {
         }
     }
 
+    .menu {
+        @include font(normal, 400, 2rem, 138%);
+        width: 100%;
+        height: fit-content;
+        background-color: rgba(49, 41, 100, 0.9);
+        border-radius: 10px;
+        padding: 2rem;
+        color: $white;
+        transform: translateX(80rem);
+        position: relative;
+        z-index: 200;
+        transition: transform 0.5s ease-in-out;
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            .list {
+                opacity: 0;
+            }
+
+            .active-list {
+                width: 12rem;
+                text-align: center;
+                padding: 1rem;
+                border-radius: 1rem;
+                transition: all .5s ease-in-out;
+
+                &:hover {
+                    background-color: $white;
+                    color: $darkBlue;
+                    cursor: pointer;
+                }
+
+            }
+
+            @for $i from 1 through 4 {
+                .active-list:nth-of-type(#{$i}n) {
+                    animation: listDisplay 1.5s ease-in-out backwards 1;
+                    animation-delay:#{$i * 0.5s};
+                }
+            }
+        }
+    }
+
+    .active-menu {
+        @extend .menu;
+        opacity: 1;
+        z-index: 999;
+        transform: translateX(0);
+        transition: all 0.5s ease-in-out;
+    }
 }
+
+@keyframes listDisplay {
+    0% {
+        transform: translate(80rem);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(40rem);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(0rem);
+        opacity: 1;
+    }
+}
+
+@keyframes menuDisplay {
+    0% {
+        transform: translate(80rem);
+        display: none;
+    }
+
+    100% {
+        transform: translate(0rem);
+        display: block;
+    }
+}
+
+
+
 
 @media screen and (min-width:$small-tablet) {
     header {
+        .menu {
+            display: none;
+        }
+
         .header-container {
-            gap: 12rem;
+            gap: 8rem;
 
             .lines {
+                display: none;
+            }
+
+            .active-lines {
                 display: none;
             }
 
