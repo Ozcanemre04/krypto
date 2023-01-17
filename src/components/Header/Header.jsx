@@ -9,9 +9,9 @@ const Header = () => {
     <header>
         <div className='header-container'>
         <h1>KRYPTO</h1>
-        <div className={open? 'active-lines' : 'lines'} onClick={()=>{setOpen(current=>!current)}}>
+        <div className={open? 'active-lines' : 'lines'} onClick={()=>{setOpen(current=>!current)}} data-testid='lines'>
           <img src={line1} alt="" />
-          <img src={line2} alt="" />
+          <img src={line2} alt="" data-testid='line2' />
           <img src={line3} alt="" />
         </div>
         <nav>
@@ -24,7 +24,7 @@ const Header = () => {
         </nav>
         </div>
         
-         <nav className={open? 'active-menu' : 'menu'}>
+         <nav className={open? 'active-menu' : 'menu'} data-testid='menu'>
            <ul>
             <li className={open? 'active-list' : 'list'}>about</li>
             <li className={open? 'active-list' : 'list'}>pricing</li>
